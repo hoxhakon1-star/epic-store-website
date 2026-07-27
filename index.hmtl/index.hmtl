@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#121214;
+color:white;
+display:flex;
+height:100vh;
+overflow:hidden;
+}
+
+/* ===================== */
+/* SIDEBAR */
+/* ===================== */
+
+.sidebar{
+width:260px;
+background:#18181c;
+padding:25px;
+display:flex;
+flex-direction:column;
+border-right:1px solid #2d2d2d;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+margin-bottom:40px;
+text-align:center;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.menu a{
+color:#bdbdbd;
+text-decoration:none;
+padding:14px;
+border-radius:12px;
+transition:.3s;
+font-size:17px;
+}
+
+.menu a:hover{
+background:#2b2b2b;
+color:white;
+}
+
+.menu a.active{
+background:#2f2f2f;
+color:white;
+}
+
+.bottom{
+margin-top:auto;
+font-size:13px;
+color:gray;
+}
+
+/* ===================== */
+/* MAIN */
+/* ===================== */
+
+.main{
+flex:1;
+display:flex;
+flex-direction:column;
+overflow:auto;
+}
+
+.topbar{
+height:85px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 40px;
+background:#151519;
+border-bottom:1px solid #2a2a2a;
+}
+
+.search{
+width:420px;
+height:45px;
+border:none;
+outline:none;
+border-radius:30px;
+padding-left:20px;
+background:#26262b;
+color:white;
+font-size:15px;
+}
+
+.nav{
+display:flex;
+gap:35px;
+font-size:17px;
+}
+
+.nav a{
+color:#b8b8b8;
+text-decoration:none;
+transition:.3s;
+}
+
+.nav a:hover{
+color:white;
+}
+
+.profile{
+width:45px;
+height:45px;
+border-radius:50%;
+background:#2e2e2e;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+
+/* ===================== */
+
+.container{
+display:flex;
+padding:35px;
+gap:30px;
+}
+
+/* PRODUCTS */
+
+.products{
+flex:1;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1d1d22;
+border-radius:18px;
+overflow:hidden;
+transition:.35s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(255,255,255,.08);
+}
+
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+display:block;
+}
+
+.info{
+padding:18px;
+}
+
+.type{
+color:#8d8d8d;
+font-size:14px;
+margin-bottom:8px;
+}
+
+.title{
+font-size:22px;
+font-weight:600;
+}
+
+.price{
+margin-top:15px;
+font-size:21px;
+font-weight:bold;
+}
+
+/* FILTERS */
+
+.filters{
+width:300px;
+background:#1b1b1f;
+border-radius:20px;
+padding:25px;
+height:fit-content;
+}
+
+.filters h2{
+margin-bottom:20px;
+}
+
+.filter-search{
+width:100%;
+height:42px;
+border:none;
+outline:none;
+padding-left:15px;
+background:#2b2b30;
+color:white;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.filter{
+padding:18px 0;
+border-top:1px solid #333;
+display:flex;
+justify-content:space-between;
+font-size:16px;
+color:#ddd;
+}
+
+.arrow{
+transition:.3s;
+}
+
+.filter:hover .arrow{
+transform:rotate(90deg);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+GAME STORE
+</div>
+
+<div class="menu">
+
+<a class="active" href="#">🏠 Store</a>
+
+<a href="#">📚 Library</a>
+
+<a href="#">🎮 Games</a>
+
+<a href="#">⭐ Featured</a>
+
+<a href="#">⚙ Settings</a>
+
+</div>
+
+<div class="bottom">
+Made with HTML
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<input class="search" placeholder="Search Games...">
+
+<div class="nav">
+
+<a href="#">Discover</a>
+
+<a href="#">Browse</a>
+
+<a href="#">News</a>
+
+</div>
+
+<div class="profile">
+N
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="products">
+
+<!-- KARTA 1 -->
+
+<div class="card">
+
+<!-- NDËRRO KËTU FOTON -->
+<img src="image1.jpg">
+
+<div class="info">
+
+<div class="type">
+Base Game
+</div>
+
+<div class="title">
+Fortnite
+</div>
+
+<div class="price">
+Free
+</div>
+
+</div>
+
+</div>
+
+<!-- KARTA 2 -->
+
+<div class="card">
+
+<img src="image2.jpg">
+
+<div class="info">
+
+<div class="type">
+Add-On
+</div>
+
+<div class="title">
+1,000 V-Bucks
+</div>
+
+<div class="price">
+$8.99
+</div>
+
+</div>
+
+</div>
+
+<!-- KARTA 3 -->
+
+<div class="card">
+
+<img src="image3.jpg">
+
+<div class="info">
+
+<div class="type">
+Add-On
+</div>
+
+<div class="title">
+2,800 V-Bucks
+</div>
+
+<div class="price">
+$22.99
+</div>
+
+</div>
+
+</div>
+
+<!-- KARTA 4 -->
+
+<div class="card">
+
+<img src="image4.jpg">
+
+<div class="info">
+
+<div class="type">
+Add-On
+</div>
+
+<div class="title">
+5,000 V-Bucks
+</div>
+
+<div class="price">
+$36.99
+</div>
+
+</div>
+
+</div>
+
+<!-- KARTA 5 -->
+
+<div class="card">
+
+<img src="image5.jpg">
+
+<div class="info">
+
+<div class="type">
+Bundle
+</div>
+
+<div class="title">
+Starter Pack
+</div>
+
+<div class="price">
+$4.99
+</div>
+
+</div>
+
+</div>
+
+<!-- KARTA 6 -->
+
+<div class="card">
+
+<img src="image6.jpg">
+
+<div class="info">
+
+<div class="type">
+Bundle
+</div>
+
+<div class="title">
+Battle Pass
+</div>
+
+<div class="price">
+950 V-Bucks
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FILTERS -->
+
+<div class="filters">
+
+<h2>Filters</h2>
+
+<input class="filter-search" placeholder="Search Filters">
+
+<div class="filter">
+Price
+<span class="arrow">▶</span>
+</div>
+
+<div class="filter">
+Genre
+<span class="arrow">▶</span>
+</div>
+
+<div class="filter">
+Features
+<span class="arrow">▶</span>
+</div>
+
+<div class="filter">
+Platform
+<span class="arrow">▶</span>
+</div>
+
+<div class="filter">
+Type
+<span class="arrow">▶</span>
+</div>
+
+<div class="filter">
+Language
+<span class="arrow">▶</span>
+</div>
+
+<div class="filter">
+Rating
+<span class="arrow">▶</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= HERO ================= -->
+
+<style>
+
+.hero{
+margin:30px;
+height:340px;
+border-radius:24px;
+overflow:hidden;
+position:relative;
+background:url("banner.jpg") center/cover;
+display:flex;
+align-items:flex-end;
+padding:40px;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,.15));
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:550px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero p{
+color:#d9d9d9;
+line-height:1.6;
+margin-bottom:25px;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+}
+
+.play{
+background:white;
+color:black;
+border:none;
+padding:14px 28px;
+border-radius:12px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.play:hover{
+transform:scale(1.05);
+}
+
+.wishlist{
+background:#2a2a2a;
+color:white;
+border:none;
+padding:14px 28px;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+}
+
+.wishlist:hover{
+background:#3b3b3b;
+}
+
+.section-title{
+margin:0 30px;
+margin-bottom:20px;
+font-size:28px;
+font-weight:700;
+}
+
+</style>
+
+<div class="hero">
+
+<div class="hero-content">
+
+<h1>FORTNITE</h1>
+
+<p>
+Jump into Battle Royale, Creative, LEGO Fortnite,
+Rocket Racing and more.
+</p>
+
+<div class="buttons">
+
+<button class="play">
+Play Now
+</button>
+
+<button class="wishlist">
+Add to Wishlist
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<h2 class="section-title">
+Trending Games
+</h2>
+
+<script>
+
+const cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-10px) scale(1.02)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px) scale(1)";
+
+});
+
+});
+
+const search=document.querySelector(".search");
+
+search.addEventListener("keyup",()=>{
+
+const value=search.value.toLowerCase();
+
+cards.forEach(card=>{
+
+const title=card.querySelector(".title").innerText.toLowerCase();
+
+if(title.includes(value)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+});
+
+</script>
+
+
+<!-- ================= FEATURED ================= -->
+
+<style>
+
+.featured{
+padding:30px;
+}
+
+.featured h2{
+margin-bottom:20px;
+font-size:28px;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+gap:25px;
+}
+
+.feature-card{
+background:#1b1b1f;
+border-radius:20px;
+overflow:hidden;
+transition:.35s;
+cursor:pointer;
+}
+
+.feature-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(255,255,255,.12);
+}
+
+.feature-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+display:block;
+}
+
+.feature-info{
+padding:20px;
+}
+
+.feature-info h3{
+margin-bottom:10px;
+font-size:22px;
+}
+
+.feature-info p{
+color:#bdbdbd;
+font-size:15px;
+line-height:1.5;
+margin-bottom:15px;
+}
+
+.buy-btn{
+width:100%;
+padding:13px;
+background:#ffffff;
+color:#111;
+font-weight:bold;
+border:none;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.buy-btn:hover{
+background:#e6e6e6;
+}
+
+.sale{
+display:inline-block;
+background:#0d6efd;
+padding:6px 12px;
+border-radius:8px;
+font-size:13px;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+footer{
+margin-top:50px;
+padding:30px;
+text-align:center;
+color:#8d8d8d;
+border-top:1px solid #2c2c2c;
+font-size:14px;
+}
+
+</style>
+
+<section class="featured">
+
+<h2>Featured Games</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<img src="featured1.jpg">
+
+<div class="feature-info">
+
+<div class="sale">20% OFF</div>
+
+<h3>Fortnite Crew</h3>
+
+<p>
+Unlock exclusive rewards every month with Fortnite Crew.
+</p>
+
+<button class="buy-btn">
+Learn More
+</button>
+
+</div>
+
+</div>
+
+<div class="feature-card">
+
+<img src="featured2.jpg">
+
+<div class="feature-info">
+
+<div class="sale">NEW</div>
+
+<h3>Rocket League</h3>
+
+<p>
+Play free and compete in fast-paced car soccer matches.
+</p>
+
+<button class="buy-btn">
+Play Free
+</button>
+
+</div>
+
+</div>
+
+<div class="feature-card">
+
+<img src="featured3.jpg">
+
+<div class="feature-info">
+
+<div class="sale">HOT</div>
+
+<h3>LEGO Fortnite</h3>
+
+<p>
+Build, survive and explore a huge open world adventure.
+</p>
+
+<button class="buy-btn">
+Explore
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Game Store. All Rights Reserved.
+
+</footer>
+
+<script>
+
+const featureCards=document.querySelectorAll(".feature-card");
+
+featureCards.forEach(card=>{
+
+card.addEventListener("mousemove",()=>{
+
+card.style.transform="translateY(-8px) scale(1.02)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px) scale(1)";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
